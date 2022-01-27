@@ -1,8 +1,10 @@
 #author-> sakthi krishnaa --- sakthikrishnaa.be@gmail.com
 
 # step to execute the script
-# open terminal install pip
+# open powershell in windows/ terminal in linux 
+# Check for the python installation and then install PyQt5 by following commands
 # pip install PyQt5
+# pip install PyQtWebEngine
 # Do not use as primary browser
 import sys
 from PyQt5.QtCore import *
@@ -12,7 +14,7 @@ class MainWindow(QMainWindow):
     def __init__(self):
         super(MainWindow, self).__init__()
         self.browser = QWebEngineView()
-        self.browser.setUrl(QUrl('https://google.com'))
+        self.browser.setUrl(QUrl('https://duckduckgo.com'))
         self.setCentralWidget(self.browser)
         self.showMaximized()
 
@@ -43,7 +45,7 @@ class MainWindow(QMainWindow):
         self.browser.urlChanged.connect(self.update_url)
 
     def navigate_home(self):
-        self.browser.setUrl(QUrl('http://programming-hero.com'))
+        self.browser.setUrl(QUrl('https://github.com/sakthi-krishnaa/browser'))
 
     def navigate_to_url(self):
         url = self.url_bar.text()
